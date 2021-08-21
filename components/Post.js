@@ -4,7 +4,7 @@ import CategoryLabel from './CategoryLabel'
 
 export default function Post({ post }) {
   return (
-    <div className='w-full px-10 pt-6 pb-16 bg-white rounded-lg shadow-md mt-6'>
+    <div className='relative w-full px-10 pt-6 pb-16 bg-white rounded-lg shadow-md mt-6'>
         <Image
           src={post.frontmatter.cover_image}
           alt=''
