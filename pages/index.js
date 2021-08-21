@@ -1,12 +1,7 @@
-import Head from 'next/head'
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Dev Blog</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-      </Head>
-    </div>
-  )
+    <Layout>
+      <h2>content</h2>
+    </Layout>
+  );
 }

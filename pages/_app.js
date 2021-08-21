@@ -1,15 +1,7 @@
-import Header from "../components/Header";
-import "../styles/globals.css";
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Header />
-      <main className="container">
-        <Component {...pageProps} />
-      </main>
-    </>
-  );
+  return <Component {...pageProps} />
 }
 
-export default MyApp;
+export default MyApp
