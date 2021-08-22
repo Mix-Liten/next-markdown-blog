@@ -17,6 +17,11 @@ export default function Header() {
               Blog
             </a>
           </Link>
+          <Link href='/about'>
+            <a className='mx-5 cursor-pointer uppercase hover:text-indigo-300'>
+              About
+            </a>
+          </Link>
         </nav>
       </div>
     </header>
