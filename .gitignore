@@ -18,7 +18,6 @@
 # misc
 .DS_Store
 *.pem
-.husky
 
 # debug
 npm-debug.log*
