@@ -2,9 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import CategoryLabel from './CategoryLabel'
 
-export default function Post({ post }) {
+export default function Post({ post, compact }) {
   return (
-    <div className='relative w-full px-10 pt-6 pb-16 bg-white rounded-lg shadow-md mt-6'>
+    <div className={`relative w-full px-10 ${compact ? 'py-6' : 'pt-6 pb-16'} bg-white rounded-lg shadow-md mt-6`}>
+      {!compact && (
         <Image
           src={post.frontmatter.cover_image}
           alt=''
@@ -12,6 +13,7 @@ export default function Post({ post }) {
           width={600}
           className='mb-4 rounded'
         />
+      )}
       <div className='flex justify-between items-center'>
         <span className='font-light text-gray-600'>
           {post.frontmatter.date}
@@ -28,6 +30,7 @@ export default function Post({ post }) {
         <p className='mt-2 text-gray-600'>{post.frontmatter.excerpt}</p>
       </div>
 
+      {!compact && (
         <div className='w-full absolute bottom-6 left-0 flex justify-between items-center px-10'>
           <Link href={`/blog/${post.slug}`}>
             <a className='text-gray-900 hover:text-blue-600'>Read More</a>
@@ -43,6 +46,7 @@ export default function Post({ post }) {
             </h3>
           </div>
         </div>
+      )}
     </div>
   )
 }
