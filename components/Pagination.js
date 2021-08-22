@@ -11,8 +11,8 @@ export default function Pagination({ currentPage, numPages }) {
   if (numPages === 1) return <></>
 
   return (
-    <div className='mt-6'>
-      <ul className='flex pl-0 list-none my-2'>
+    <div className="mt-6">
+      <ul className="flex pl-0 list-none my-2">
         {!isFirst && (
           <Link href={prevPage}>
             <li className={btnClass}>
